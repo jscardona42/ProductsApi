@@ -4,14 +4,14 @@ using ProductApi.Application.Contracts.Persistence;
 
 namespace ProductApi.Application.Features.Products.Queries.GetProductsList
 {
-    public class GetProductsListQueryHandler : IRequestHandler<GetProductsListQuery,ProductsVm>
+    public class GetProductsListQueryHandler : IRequestHandler<GetProductsListQuery, ProductsVm>
     {
         private readonly IProductRepository _productRepository;
         private readonly IMapper _mapper;
 
         public GetProductsListQueryHandler(IProductRepository productRepository, IMapper mapper)
         {
-            this._productRepository = productRepository;
+            _productRepository = productRepository;
             _mapper = mapper;
         }
 
